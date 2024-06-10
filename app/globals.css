@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+/* 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+/* 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+.scrollHeight {
+  width: 100%;
+  height: calc(
+    100vh - 273px
+  ) !important; /* Default height for screens with width less than 786px */
+}
+
+@media (min-width: 786px) {
+  .scrollHeight {
+    height: calc(
+      100vh - 107px
+    ) !important; /* Adjusted height for screens with width 786px or greater */
+  }
+}
+
+.formScrollHeight {
+  width: 100%;
+  height: calc(
+    100vh - 200px
+  ) !important; /* Default height for screens with width less than 786px */
+}
+
+@media (min-width: 786px) {
+  .formScrollHeight {
+    height: calc(
+      100vh - 300px
+    ) !important; /* Adjusted height for screens with width 786px or greater */
+  }
+}
