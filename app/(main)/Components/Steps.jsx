@@ -37,7 +37,7 @@ export default function Steps() {
       <div class="flex flex-wrap h-[100%] items-center">
         <div class="w-full md:w-1/2 p-4 flex flex-col items-center justify-center">
           <RotatingCardOnPalm />
-          <img src="/images/palm.webp" alt="palm" className="w-[60vh]" />
+          <img src="/images/palm.png" alt="palm" className="w-[60vh]" />
         </div>
         <div class="w-full md:w-1/2 p-4">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-3xl">
