@@ -84,15 +84,15 @@ const footerNavigation = {
 const Footer = () => {
   const router = useRouter();
   return (
-    <footer className="bg-slate-50" aria-labelledby="footer-heading">
+    <footer className="bg-slate-50 relative z-30 h-[100vh] bg-black flex items-center" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-md px-6 py-12 sm:max-w-7xl lg:px-8 lg:py-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-4 xl:col-span-1">
-            <h2 className="text-[23px] font-[500]">Personalized Card</h2>
-            <p className="text-base text-slate-500">
+            <h2 className="text-[23px] font-[500] text-white">Personalized Card</h2>
+            <p className="text-white text-slate-500">
               Custom metal credit & debit cards
             </p>
             <div className="flex space-x-6">
@@ -102,7 +102,7 @@ const Footer = () => {
                   href={item.href}
                   className="text-slate-400 hover:text-slate-500"
                 >
-                  <span className="sr-only">{item.name}</span>
+                  <span className="sr-only text-white">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
               ))}
@@ -111,7 +111,7 @@ const Footer = () => {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-slate-900">
+                <h3 className="text-white font-medium text-slate-900">
                   Services
                 </h3>
                 <ul role="list" className="mt-4 space-y-2 md:space-y-4">
@@ -130,7 +130,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-slate-900">Pages</h3>
+                <h3 className="text-white font-medium text-slate-900">Pages</h3>
                 <ul role="list" className="mt-4 space-y-2 md:space-y-4">
                   {footerNavigation.pages.map((item) => (
                     <li key={item.name}>
@@ -149,7 +149,7 @@ const Footer = () => {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-slate-900">
+                <h3 className="text-white font-medium text-slate-900">
                   About Us
                 </h3>
                 <ul role="list" className="mt-4 space-y-2 md:space-y-4">
@@ -168,7 +168,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-slate-900">
+                <h3 className="text-white font-medium text-slate-900">
                   Contact
                 </h3>
                 <ul role="list" className="mt-4 space-y-2 md:space-y-4">

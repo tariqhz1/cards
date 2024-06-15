@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const BackgroundVideo = ({ heroContent }) => {
+const RotatingCardOnPalm = ({ }) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const videoRef = useRef(null);
@@ -59,19 +59,16 @@ const BackgroundVideo = ({ heroContent }) => {
     }, []);
 
     return (
-        <div className="fixed w-full h-screen overflow-hidden">
-            <video
-                ref={videoRef}
-                playsInline
-                loop
-                muted
-                preload='auto'
-                className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
-                src="/videos/home.mp4"
-            />
-            {heroContent}
-        </div>
+        <video
+            ref={videoRef}
+            playsInline
+            loop
+            muted
+            preload='auto'
+            className="w-[60vh]"
+            src="/videos/rotating.mp4"
+        />
     );
 };
 
-export default BackgroundVideo;
+export default RotatingCardOnPalm;

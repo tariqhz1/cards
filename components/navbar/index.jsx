@@ -2,9 +2,7 @@
 
 import React, { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import { Bars3Icon, Bars4Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname, useRouter } from "next/navigation";
 import { authUser } from "@/utils/authUser";
 import { signOut } from "firebase/auth";
@@ -65,7 +63,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-[#192231] border-b-[#ffffff0d] border-b-[1px] border-solid"
+      className="fixed top-0 z-50 w-full"
     >
       {({ open }) => (
         <>
@@ -89,28 +87,6 @@ export default function Navbar() {
                     LOGO
                   </p>
                 </div>
-                <div className="hidden lg:ml-6 lg:block">
-                  <div className="flex space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    {navLinks.map((item, i) => (
-                      <span
-                        key={i}
-                        onClick={() => {
-                          router.push(item.link);
-                        }}
-                        className={`rounded-md hover:bg-[#374151] px-3 py-2 text-[17px] font-medium text-white cursor-pointer ${
-                          item.title === "Templates"
-                            ? pathname.includes("templates") && "bg-[#374151]"
-                            : item.title === "About"
-                            ? pathname.includes("about-us") && "bg-[#374151]"
-                            : ""
-                        }`}
-                      >
-                        {item.title}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               <div className="flex lg:hidden">
@@ -131,16 +107,10 @@ export default function Navbar() {
                   {authenticateUser ? (
                     <Menu as="div" className="relative ml-4 flex-shrink-0">
                       <div>
-                        <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <Menu.Button className="relative flex rounded-full">
                           <span className="absolute -inset-1.5" />
                           <span className="sr-only">Open user menu</span>
-                          <Image
-                            className="h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                            width={300}
-                            height={300}
-                          />
+                          <Bars4Icon className="h-6 w-6 text-white" />
                         </Menu.Button>
                       </div>
                       <Transition
