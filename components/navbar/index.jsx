@@ -50,7 +50,7 @@ export default function Navbar() {
                       router.push("/");
                     }}
                   >
-                    LOGO
+                    <img src="/images/logo.png" alt="logo" className="w-[73px] h-[60px]" />
                   </p>
                 </div>
               </div>
