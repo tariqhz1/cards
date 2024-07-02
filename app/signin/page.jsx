@@ -38,8 +38,8 @@ export default function Signin() {
         );
         if (user) {
           if (user?.user?.emailVerified) {
-            localStorage.setItem("personalizedCard", values.email);
-            window.location.reload();
+            localStorage.setItem("email", values.email);
+            router.push("/")
           } else {
             toast.error("Email verification is pending");
             setloading(false);

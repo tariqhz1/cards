@@ -36,7 +36,7 @@ export default function Hero() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
             <span
                 onClick={() => {
-                  //router.push("/templates");
+                  router.push("/templates/customize/0");
                 }}
                 className="rounded-md bg-white px-4 py-3.5 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
               >
@@ -44,7 +44,7 @@ export default function Hero() {
               </span>
               <span
                 onClick={() => {
-                  //router.push("/templates");
+                  router.push("/templates");
                 }}
                 className="rounded-md bg-white px-4 py-3.5 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
               >

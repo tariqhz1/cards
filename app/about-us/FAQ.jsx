@@ -75,23 +75,23 @@ const FAQ = () => {
     },
   ];
   return (
-    <div className="bg-slate-50">
+    <div className="bg-black">
       {/* FAQ */}
       <section
         className="mx-auto max-w-md divide-y-2 divide-slate-200  px-6 py-24 sm:max-w-3xl lg:max-w-7xl lg:px-8 lg:py-32"
         aria-labelledby="faq-heading"
       >
         <h2
-          className="text-3xl font-bold tracking-tight text-slate-900 text-center mb-[38px]"
+          className="text-4xl font-bold tracking-tight text-white text-center mb-[38px]"
           id="faq"
         >
-          Frequently asked questions
+          Frequently Asked Questions
         </h2>
         <div className="mt-6 pt-10">
           <dl className="space-y-10 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12 md:space-y-0">
             {faqs.map((faq) => (
               <div key={faq.id}>
-                <dt className="text-lg font-medium text-slate-900">
+                <dt className="text-lg font-medium text-white">
                   {faq.question}
                 </dt>
                 <dd className="mt-2 text-base text-slate-500">{faq.answer}</dd>

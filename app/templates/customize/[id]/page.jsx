@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div style={{ marginTop: 128, marginBottom: 64 }}>
       <CardCustomization />
     </div>
   );

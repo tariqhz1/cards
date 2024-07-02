@@ -1,7 +1,5 @@
-import React from "react";
-import jwt from "jsonwebtoken";
 import { jwtDecode } from "jwt-decode";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/Firebase/config";
 
 export const authUser = () => {
@@ -33,7 +31,7 @@ export const getUserFromToken = (token) => {
 };
 
 export const isTokenExpired = () => {
-  const token = localStorage.getItem("personalizedCard");
+  const token = localStorage.getItem("email");
 
   if (token) {
     const decodedToken = jwtDecode(token);

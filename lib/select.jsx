@@ -36,11 +36,11 @@ export default function Select({
           </Listbox.Label>
           <div className="relative mt-2">
             <Listbox.Button className="relative w-full cursor-default rounded-md bg-white pt-[10px] pb-[10px] pl-3 pr-10 text-left text-[rgba(23,23,23,1)] shadow-sm ring-inset ring-[#DEDEDE] focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm text-[17px] font-[600] sm:leading-6 border-[1px] border-solid border-[#DEDEDE]">
-              <span className="flex items-center">
+              <span className="flex items-center gap-4 ml-4">
                 {cards[0].name === "No Background" ? null : <CreditCard />}
                 <span className="ml-3 block truncate">{selected.name}</span>
               </span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+              <span className="pointer-events-none absolute inset-y-0 right-4 ml-3 flex items-center pr-2" style={{ top: 12 }}>
                 <ChevronUpDownIcon
                   className="h-5 w-5 text-gray-400"
                   aria-hidden="true"
@@ -69,7 +69,7 @@ export default function Select({
                   >
                     {({ selected, active }) => (
                       <>
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-4 ml-4">
                           {person.name === "Black Background" ? (
                             <div
                               style={{

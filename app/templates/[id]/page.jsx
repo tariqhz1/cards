@@ -180,44 +180,16 @@ const CardCustomization = ({ params }) => {
   }, [card]);
 
   return (
-    <div className="md:px-[15px] pl-[10px]">
+    <div className="md:px-[15px] pl-[10px]" style={{ paddingTop: 128, paddingBottom: 64 }}>
       {loader ? (
         <div className="h-[calc(100vh-91px)] flex justify-center items-center">
           <Spinner />
         </div>
       ) : card.image ? (
-        <div className="flex lg:flex-row flex-col lg:justify-between  w-[100%] h-[calc(100vh-92px)]">
+        <div className="flex lg:flex-row flex-col lg:justify-between  w-[100%]">
           <div className="pt-[40px] lg:w-[55%] w-[100%]">
             <div className="pr-[15px] lg:pl-[50px] pl-[0px] flex flex-col gap-[25px] ">
               <div className="relative lg:w-max flex lg:justify-start justify-center items-center md:w-[100%] w-[100%] mainDiv">
-                {/* <div className="absolute md:top-[84px] md:gap-[0] gap-[5px] top-[39px] text-[#f0e4e4] flex w-[100%] h-[100%] flex-col justify-center items-center font-[600]">
-                    {card.numberType === "Front" && card.showNumber && (
-                      <>
-                        <p className="md:text-[45px] text-[20px] md:w-[79%] w-[78%] font-[300]">
-                          {card.number
-                            ? card.number.replace(/(.{4})/g, "$1 ")
-                            : "0000 0000 0000 0000"}
-                        </p>
-                      </>
-                    )}
-                    <div className="w-[80%] md:mt-[12px] mt-[0px]">
-                      {card.numberType === "Front" && card.showDate && (
-                        <p className="md:text-[25px] text-[17px] flex items-center">
-                          <span className="relative top-[1px] md:w-[37px] w-[29px] flex md:text-[10px] text-[7px] md:tracking-[] tracking-[0.7px] md:leading-[12px] leading-[8px] uppercase items-center">
-                            valid thru
-                          </span>
-                          <span className="tracking-[2px] md:text-[25px] text-[13px] font-[400]">
-                            55/55
-                          </span>
-                        </p>
-                      )}
-                      {card.nameType === "Front" && card.showName && (
-                        <p className="text-left md:pt-[0px] pt-[0px] md:text-[28px] text-[15px] uppercase font-[400]">
-                          {card.name ? card.name : "(your name)"}
-                        </p>
-                      )}
-                    </div>
-                  </div> */}
                 <Image
                   src={
                     card.image === "template1"

@@ -10,9 +10,7 @@ export function Layout({ children }) {
     <div className="bg-[#000000f0]">
       <Navbar />
       <main className="flex-auto">{children}</main>
-      {pathname.split("/").length !== 3 && pathname.split("/").length !== 4 && (
-        <Footer />
-      )}
+      <Footer />
     </div>
   );
 }

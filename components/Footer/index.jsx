@@ -84,7 +84,7 @@ const footerNavigation = {
 const Footer = () => {
   const router = useRouter();
   return (
-    <footer className="bg-slate-50 relative z-30 h-[100vh] bg-black flex items-center" aria-labelledby="footer-heading">
+    <footer className="relative z-30 bg-black flex items-center" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

@@ -38,15 +38,15 @@ const supportLinks = [
 
 export default function Aboutus() {
   return (
-    <div className="bg-slate-50">
-      <header className="relative bg-[#192231] pb-36">
+    <div className="bg-black">
+      <header className="relative pb-36">
         <div className="absolute inset-0">
           {/* <img
             className="h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
             alt=""
           /> */}
-          <div className="absolute inset-0 bg-[#192231] " aria-hidden="true" />
+          <div className="absolute inset-0 " aria-hidden="true" />
         </div>
 
         <div className="relative mx-auto max-w-md px-6 pb-32 sm:max-w-3xl mt-0 pt-[64px] md:pt-[122px] lg:max-w-7xl lg:px-8">
@@ -75,26 +75,26 @@ export default function Aboutus() {
               {supportLinks.map((link) => (
                 <div
                   key={link.name}
-                  className="flex flex-col rounded-2xl bg-white shadow-xl"
+                  className="flex flex-col rounded-2xl bg-black shadow-xl"
                 >
-                  <div className="relative flex-1 px-6 pb-8 pt-16 md:px-8">
-                    <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-blue-600 p-5 shadow-lg">
+                  <div className="relative flex-1 px-6 pb-8 pt-16 md:px-8 border border-gray-300 rounded-tl-2xl rounded-tr-2xl">
+                    <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-black p-5 shadow-lg border border-gray-300">
                       <link.icon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
                       />
                     </div>
-                    <h3 className="text-xl font-medium text-slate-900">
+                    <h3 className="text-xl font-medium text-white">
                       {link.name}
                     </h3>
-                    <p className="mt-4 text-base text-slate-500">
+                    <p className="mt-4 text-base text-white">
                       {link.description}
                     </p>
                   </div>
-                  <div className="rounded-bl-2xl rounded-br-2xl bg-slate-50 p-6 md:px-8">
+                  <div className="rounded-bl-2xl rounded-br-2xl p-6 md:px-8 border border-gray-300">
                     <a
                       href={link.href}
-                      className="text-base font-medium text-blue-700 hover:text-blue-600"
+                      className="text-base font-medium text-white hover:text-blue-600"
                     >
                       Contact us
                       <span aria-hidden="true"> &rarr;</span>

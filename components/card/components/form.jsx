@@ -125,7 +125,7 @@ const Form = ({
               borderRadius: "10px",
               margin: "3px 0px -4px",
               width: "128%",
-              zIndex: 2000000,
+              zIndex: 9,
             }}
           />
         )}
